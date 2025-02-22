@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍒Cherry Hydration💕</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FFD0D0;
+            padding-top: 100px;
+        }
+
+        nav {
+            background-color: #c9184a;
+            padding: 10px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 20px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 5px 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            padding: 5px;
+            width: 250px;
+        }
+
+        .search-bar .bi-search {
+            color: #c9184a;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-icons i {
+            font-size: 24px;
+            color: #ffffff;
+        }
+
+        .bundles-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background-color: transparent;
+            perspective: 1000px;
+            height: 450px;
+            margin-bottom:5px;
+         } 
+
+        .product-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .product-card:hover .product-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .product-front, .product-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .product-front {
+            background-color: white;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+      
+
+        .product-image {
+            width: 100%;
+            height: 61%;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 0.2rem;
+        }
+
+        .product-title {
+            color: #c9184a;
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        .product-price {
+            color: #ff6384;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin: 0.5rem 0;
+        }
+
+      
+
+        .page-title {
+            text-align: center;
+            color: #c9184a;
+            margin: 2rem 0;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .add-to-cart-btn {
+            background-color: #ff6384;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            
+            margin-top: auto;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #ff4d73;
+          
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .add-to-cart-btn i {
+            margin-right: 8px;
+             margin-bottom:15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <i class="bi bi-search"></i>
+        </div>
+
+        <div class="logo">
+            <img src="logo1.jpeg" alt="Logo">
+        </div>
+
+        <div class="nav-icons">
+            <a href="home.html"><i class="bi bi-house"></i></a>
+            <a href="bundles.html"><i class="bi bi-box2-heart"></i></a>
+            <a href="cart.html"><i class="bi bi-cart"></i></a>
+            <a href="about-us.html"><i class="bi bi-lightbulb"></i></a>
+            <a href="contact-us.html"><i class="bi bi-envelope"></i></a>
+        </div>
+    </nav>
+
+    <h1 class="page-title">Bundles</h1>
+
+    <div class="bundles-container">
+        <!-- Product 1 -->
+        <div class="product-card">
+                <div class="product-front">
+                    <img src="bundle1.jpg" alt="Hydration heroes" class="product-image">
+                    <h3 class="product-title">Hydration heroes</h3>
+                    <p class="product-price">$32.99</p>
+                        <button class="add-to-cart-btn"><i class="bi bi-cart-plus"></i>Add to Cart</button>
+                    </div>
+                </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+                <div class="product-front">
+                    <img src="bundle2.jpg" alt="Sensitive skin saviours" class="product-image">
+                    <h3 class="product-title">Sensitive skin saviours</h3>
+                    <p class="product-price">$28.99</p>
+                        <button class="add-to-cart-btn"><i class="bi bi-cart-plus"></i>Add to Cart</button>
+                    </div>
+                </div>
+         
+
+        <!-- Product 3 -->
+        <div class="product-card">
+                <div class="product-front">
+                    <img src="bundle3.jpg" alt="Retinol Serum" class="product-image">
+                    <h3 class="product-title">Beauty bliss bundle</h3>
+                    <p class="product-price">$34.99</p>
+                        <button class="add-to-cart-btn"><i class="bi bi-cart-plus"></i>Add to Cart</button>
+                    </div>
+                </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+                <div class="product-front">
+                    <img src="bundle4.jpg" alt="Eye and lip essentials" class="product-image">
+                    <h3 class="product-title">Eye and lip essentials</h3>
+                    <p class="product-price">$29.99</p>
+                        <button class="add-to-cart-btn"><i class="bi bi-cart-plus"></i>Add to Cart</button>
+                    </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+                <div class="product-front">
+                    <img src="bundle5.jpg" alt="oily skin savoiurs" class="product-image">
+                    <h3 class="product-title">oily skin savoiurs</h3>
+                    <p class="product-price">$31.99</p>
+                        <button class="add-to-cart-btn"><i class="bi bi-cart-plus"></i>Add to Cart</button>
+                    </div>
+                </div>
+            
+
+        <!-- bundle 6 -->
+        <div class="product-card">
+                <div class="product-front">
+                    <img src="bundle6.jpg" alt="skin savoiur" class="product-image">
+                    <h3 class="product-title">skin savoiurs</h3>
+                    <p class="product-price">$33.99</p>
+                    <button class="add-to-cart-btn"><i class="bi bi-cart-plus"></i>Add to Cart</button>
+                </div>
+                </div>
+                        
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <script>
+        // Add to Cart Logic
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const productCard = e.target.closest('.product-card');
+                const productName = productCard.querySelector('.product-title').innerText;
+                const productPrice = parseFloat(productCard.querySelector('.product-price').innerText.replace('$', ''));
+                const productImage = productCard.querySelector('.product-image').src;
+   
+                // Retrieve cart from localStorage or initialize empty
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+   
+                // Check if product already exists
+                const existingProduct = cart.find(item => item.name === productName);
+                if (existingProduct) {
+                    existingProduct.quantity += 1;
+                } else {
+                    cart.push({ name: productName, price: productPrice, image: productImage, quantity: 1 });
+                }
+   
+                // Save updated cart to localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+                window.location.href = 'cart.html';
+   
+   
+                alert(`${productName} has been added to the cart.`);
+            });
+        });
+    </script>
+</body>
+</html>
